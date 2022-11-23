@@ -25,3 +25,4 @@ Happy modeling!
 
 [0m14:38:39.285492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10caa8d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10caa8c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10caa8730>]}
 [0m14:38:39.285934 [debug] [MainThread]: Flushing usage events
+
