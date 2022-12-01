@@ -13,4 +13,6 @@ Data Pipeline (ELT) project using the Modern Data Stack to Extract/Load (Airbyte
 - airbyte (data ingestion)
 - dbt (data transformation + data modeling)
 - prefect (automated orchestration)
-- thoughtspot/looker (data visualization)
+- thoughtspot/looker/tableau (data visualization) - TBD
+
+**Link to Dashboard (refreshed daily):** Coming Soon =)
