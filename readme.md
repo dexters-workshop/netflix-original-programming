@@ -1,4 +1,4 @@
-### Netflix Programming Project
+### Netflix Programming Project (in progress, early stage development)
 
 Data Pipeline (ELT) project using the Modern Data Stack to Extract/Load (Airbyte) netflix data into my data warehouse (Snowflake) then transform/model (dbt) that data before visualizing (tbd) it in a simple dashboard. 
 
@@ -13,7 +13,7 @@ This project is part of challenging myself to get a fully orchestrated data pipe
 **MDS Tools Used in Project:**
 - snowflake (datawarehousing)
 - airbyte (data ingestion)
-- dbt (data transformation + data modeling)
+- dbt core (data transformation + data modeling)
 - prefect (automated orchestration)
 - thoughtspot/looker/tableau (data visualization) - TBD
 
