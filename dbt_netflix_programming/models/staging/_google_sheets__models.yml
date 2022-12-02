@@ -1,0 +1,9 @@
+version: 2
+
+
+models:
+  - name: stg_google_sheets__original_categories
+
+  - name: stg_google_sheets__original_comedies
+
+  - name: stg_google_sheets__original_dramas

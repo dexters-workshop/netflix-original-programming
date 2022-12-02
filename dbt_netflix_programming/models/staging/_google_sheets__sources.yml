@@ -1,0 +1,23 @@
+version: 2
+
+# config file for source data living in google sheets
+# the data lands in google sheets after being scraped from wikipedia each day
+
+sources:
+  - name: google_sheets # name of the source - imp. for calling in sql files when using source('source-name', 'table-name') function
+    description: replica of source data that originated from netflix originals wikipedia page
+    database: NETFLIX_DEV_DB  # this is the name of our database in snowflake
+    schema: NETFLIX_DBT_DEXTER # this is the schema where our raw data lives in snowflake
+
+    tables:
+      - name: GOOGLE_SHEETS__ORIGINAL_CATEGORIES
+        description: >
+          Dimension table with netflix original programming categories
+
+      - name: GOOGLE_SHEETS__ORIGINAL_COMEDIES
+        description: >
+          Netflix original comedies 
+
+      - name: GOOGLE_SHEETS__ORIGINAL_DRAMAS
+        description: >
+          Netflix original dramas 
