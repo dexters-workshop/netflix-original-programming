@@ -7,8 +7,24 @@ with source as (
 
 standardized as (
 
-  select * from source
+  -- project focus is only on three categories
+  select
+      case 
+        when category = '1Drama' then 1
+        when category = '2Comedy' then 2
+        when category like '%6.1Docuseries%' then 3
+        else null
+      end as category_id
+    , case
+        when category = '1Drama' then 'Drama'
+        when category = '2Comedy' then 'Comedy'
+        when category like '%6.1Docuseries%' then 'Docuseries'
+        else category
+      end as category
+    , date(updated_at) as updated_at
+  from source
 
 )
 
 select * from standardized
+-- where category_id in (1, 2, 3)    -- move to intermediate table
