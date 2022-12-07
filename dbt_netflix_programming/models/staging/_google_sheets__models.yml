@@ -7,3 +7,5 @@ models:
   - name: stg_google_sheets__original_comedies
 
   - name: stg_google_sheets__original_dramas
+
+  - name: stg_google_sheets__original_docuseries

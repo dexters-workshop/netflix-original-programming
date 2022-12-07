@@ -8,6 +8,9 @@ sources:
     description: replica of source data that originated from netflix originals wikipedia page
     database: AIRBYTE_DATABASE  # this is the name of our database in snowflake
     schema: AIRBYTE_SCHEMA # this is the schema where our raw data lives in snowflake
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
 
     tables:
       - name: GOOGLE_SHEETS__ORIGINAL_CATEGORIES
@@ -24,3 +27,8 @@ sources:
         loaded_at_field: Updated_at
         description: >
           Netflix original dramas 
+
+      - name: GOOGLE_SHEETS__ORIGINAL_DOCUSERIES
+        loaded_at_field: Updated_at
+        description: >
+          Netflix original docuseries 

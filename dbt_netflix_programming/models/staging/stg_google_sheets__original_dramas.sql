@@ -1,9 +1,3 @@
-{{
-  config(
-    materialized='table'
-  )
-}}
-
 
 with source as (
 
@@ -13,8 +7,7 @@ with source as (
 
 standardized as (
 
-    select *
-    from source
+    select * from source
 
 )
 
