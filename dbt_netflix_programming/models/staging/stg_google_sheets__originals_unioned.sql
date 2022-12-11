@@ -34,7 +34,7 @@ standardized as (
         , regexp_replace(premiere, '\\[[[:digit:]]+\\]', '') as premiere
         , seasons
         , runtime
-        , status
+        , status as renewal_status
     
         -- originated from airbyte at time of ingestion
         , updated_at 
@@ -73,7 +73,7 @@ select
    , category_id
    , seasons
    , runtime
-   , status
+   , renewal_status
    , date(premiere_year || '-' || premiere_month || '-' || premiere_day) as premiere_date
    , premiere_year
    , premiere_month
