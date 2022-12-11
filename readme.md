@@ -1,4 +1,4 @@
-### Netflix Programming Project (in progress)
+### Netflix Original Programming (in progress)
 
 Data Pipeline (ELT) project using the Modern Data Stack (MDS) to Extract/Load (Airbyte) netflix data into my data warehouse (Snowflake) then transform (dbt) and model that data in order to visualize it in a Dashboard (tbd). 
 
