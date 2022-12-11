@@ -34,5 +34,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   netflix_programming:
     # Config indicated by + and applies to all files under models/example/
+
     staging:
       +materialized: view
