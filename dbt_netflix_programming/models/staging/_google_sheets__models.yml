@@ -2,10 +2,14 @@ version: 2
 
 
 models:
+  - name: base_google_sheets__original_comedies
+
+  - name: base_google_sheets__original_dramas
+
+  - name: base_google_sheets__original_docuseries
+
   - name: stg_google_sheets__original_categories
 
-  - name: stg_google_sheets__original_comedies
+  - name: stg_google_sheets__originals_unioned
 
-  - name: stg_google_sheets__original_dramas
 
-  - name: stg_google_sheets__original_docuseries
