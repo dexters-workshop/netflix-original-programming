@@ -10,6 +10,7 @@ standardized as (
     -- saving data standardization/cleaning for after union (to stay DRY)
     select 
         title
+      , 3 as category_id  
       , genre
       , premiere
       , seasons
