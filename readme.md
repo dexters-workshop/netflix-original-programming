@@ -6,8 +6,6 @@ The source data originates from tables in a <a href="https://en.wikipedia.org/wi
 
 **Project Objective:** Setup a fully automated data pipeline with reporting tables that drive my Dashboard containing an overview of current Netflix original programs and the ones launching in upcoming days/weeks/months (this way my wife and i can see what’s coming down the pipeline)
 
-<br>
-
 **MDS Tools Used in Project:**
 - Snowflake (datawarehousing)
 - Airbyte (data ingestion)
@@ -16,8 +14,6 @@ The source data originates from tables in a <a href="https://en.wikipedia.org/wi
 - Thoughtspot/Looker/Tableau (data visualization) - TBD
 
 **Link to Dashboard (refreshed daily):** Coming Soon =)
-
-<br>
 
 **Project Dag (in progress):**
 ![dag](images/dag.png)
