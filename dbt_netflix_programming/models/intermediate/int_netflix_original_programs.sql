@@ -27,7 +27,7 @@ select
   , premiere_year
   , premiere_month
   , premiere_day
-  , updated_at
+  , updated_at_utc
 from program_originals
 join program_categories using(category_id)
 where 

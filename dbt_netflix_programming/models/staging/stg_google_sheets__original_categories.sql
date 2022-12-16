@@ -21,7 +21,7 @@ standardized as (
         when category like '%6.1Docuseries%' then 'Docuseries'
         else category
       end as category
-    , date(updated_at) as updated_at
+    , updated_at as updated_at_utc
   from source
 
 )

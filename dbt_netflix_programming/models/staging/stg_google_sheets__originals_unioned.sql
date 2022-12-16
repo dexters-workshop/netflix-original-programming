@@ -37,7 +37,7 @@ standardized as (
         , status as renewal_status
     
         -- originated from airbyte at time of ingestion
-        , updated_at 
+        , updated_at as updated_at_utc
     
     from originals_unioned
 ),
@@ -78,5 +78,5 @@ select
    , premiere_year
    , premiere_month
    , premiere_day
-   , updated_at
+   , updated_at_utc
 from premiere_date_cleanup

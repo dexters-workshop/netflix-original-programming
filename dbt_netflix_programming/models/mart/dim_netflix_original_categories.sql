@@ -9,6 +9,6 @@ with program_categories as (
 select
     category_id
     , category
-    , updated_at
+    , updated_at_utc
 from program_categories
 where category_id in (1, 2, 3)  
