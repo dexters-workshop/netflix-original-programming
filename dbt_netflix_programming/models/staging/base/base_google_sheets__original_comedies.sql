@@ -16,8 +16,7 @@ standardized as (
       , seasons
       , runtime
       , status
-      --, date(updated_at) as updated_at
-      , _airbyte_emitted_at as updated_at
+      , _airbyte_emitted_at as updated_at -- switched to airbyte created column instead of google sheet created column
     from source
 
 )
