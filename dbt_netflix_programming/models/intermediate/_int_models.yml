@@ -3,3 +3,5 @@ version: 2
 
 models:
   - name: int_netflix_original_programs
+
+  - name: dim_netflix_original_categories

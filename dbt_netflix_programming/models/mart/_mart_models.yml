@@ -2,4 +2,4 @@ version: 2
 
 
 models:
-  - name: dim_netflix_original_categories
+  - name: netflix_original_programs
