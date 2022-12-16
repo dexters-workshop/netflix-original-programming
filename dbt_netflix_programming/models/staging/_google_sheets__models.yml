@@ -3,13 +3,18 @@ version: 2
 
 models:
   - name: base_google_sheets__original_comedies
+    description: Current and upcoming COMEDIES for original streaming television programming on Netflix.
 
   - name: base_google_sheets__original_dramas
+    description: Current and upcoming DRAMAS for original streaming television programming on Netflix.
 
   - name: base_google_sheets__original_docuseries
+    description: Current and upcoming DOCUSERIES for original streaming television programming on Netflix.
 
   - name: stg_google_sheets__original_categories
+    description: Netflix original program categories and their 1:1 mapping with category IDs.
 
   - name: stg_google_sheets__originals_unioned
+    description: Unioned base models for Netflix Original programs. Grain is at the program level (1 program, 1 record)
 
 
