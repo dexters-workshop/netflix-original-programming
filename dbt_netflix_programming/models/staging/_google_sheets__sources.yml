@@ -8,21 +8,24 @@ sources:
     description: replica of source data that originated from netflix originals wikipedia page
     database: AIRBYTE_DATABASE  # name of our database in snowflake
     schema: AIRBYTE_SCHEMA      # name of schema where our raw data lives in snowflake
-    freshness: # test for freshness in source tables across source schema
-      warn_after: {count: 24, period: hour}
-      error_after: {count: 48, period: hour}
 
     tables:
       - name: GOOGLE_SHEETS__ORIGINAL_CATEGORIES
         loaded_at_field: _airbyte_emitted_at
+        freshness: # test for freshness in source tables
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 48, period: hour}
         description: Dimension table with netflix original programming categories
         columns:
           - name: category
-            tests:
+            tests:              # test gets applied to the incoming source data NOT the transformed output!!!
               - not_null
 
       - name: GOOGLE_SHEETS__ORIGINAL_COMEDIES
         loaded_at_field: _airbyte_emitted_at
+        freshness: # test for freshness in source tables
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 48, period: hour}
         description: Netflix original comedies 
         columns:
           - name: title
@@ -31,6 +34,9 @@ sources:
 
       - name: GOOGLE_SHEETS__ORIGINAL_DRAMAS
         loaded_at_field: _airbyte_emitted_at
+        freshness: # test for freshness in source tables
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 48, period: hour}
         description: Netflix original dramas 
         columns:
           - name: title
@@ -39,6 +45,9 @@ sources:
 
       - name: GOOGLE_SHEETS__ORIGINAL_DOCUSERIES
         loaded_at_field: _airbyte_emitted_at
+        freshness: # test for freshness in source tables
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 48, period: hour}
         description: Netflix original docuseries 
         columns:
           - name: title
