@@ -6,26 +6,26 @@ version: 2
 sources:
   - name: google_sheets # name of the source - imp. for calling in sql files when using source('source-name', 'table-name') function
     description: replica of source data that originated from netflix originals wikipedia page
-    database: AIRBYTE_DATABASE  # name of our database in snowflake
-    schema: AIRBYTE_SCHEMA      # name of schema where our raw data lives in snowflake
+    database: AIRBYTE_DATABASE  # name of our database in snowflake (ingested by airbyte)
+    schema: AIRBYTE_SCHEMA      # schema that airbyte loads source data within snowflake
 
     tables:
       - name: GOOGLE_SHEETS__ORIGINAL_CATEGORIES
+        description: Dimension table with netflix original programming categories
         loaded_at_field: _airbyte_emitted_at
         freshness: # test for freshness in source tables
           warn_after: {count: 24, period: hour}
-          error_after: {count: 48, period: hour}
-        description: Dimension table with netflix original programming categories
+          error_after: {count: 48, period: hour} 
         columns:
           - name: category
-            tests:              # test gets applied to the incoming source data NOT the transformed output!!!
+            tests: # test gets applied to the incoming source data NOT the transformed output!!!
               - not_null
 
       - name: GOOGLE_SHEETS__ORIGINAL_COMEDIES
         loaded_at_field: _airbyte_emitted_at
         freshness: # test for freshness in source tables
           warn_after: {count: 24, period: hour}
-          error_after: {count: 48, period: hour}
+          error_after: {count: 48, period: hour} 
         description: Netflix original comedies 
         columns:
           - name: title
@@ -36,7 +36,7 @@ sources:
         loaded_at_field: _airbyte_emitted_at
         freshness: # test for freshness in source tables
           warn_after: {count: 24, period: hour}
-          error_after: {count: 48, period: hour}
+          error_after: {count: 48, period: hour} 
         description: Netflix original dramas 
         columns:
           - name: title
@@ -47,7 +47,7 @@ sources:
         loaded_at_field: _airbyte_emitted_at
         freshness: # test for freshness in source tables
           warn_after: {count: 24, period: hour}
-          error_after: {count: 48, period: hour}
+          error_after: {count: 48, period: hour} 
         description: Netflix original docuseries 
         columns:
           - name: title
