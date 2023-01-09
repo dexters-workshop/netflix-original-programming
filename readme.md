@@ -13,9 +13,7 @@ Data Pipeline (ELT) project using the Modern Data Stack (MDS) to Extract/Load (A
 - Airbyte (data ingestion)
 - dbt Core (data transformation + data modeling)
 - Prefect (automated orchestration)
-- Thoughtspot/Looker/Tableau (data visualization) - TBD
-
-**Link to Dashboard (refreshed daily):** Coming Soon =)
+- Looker (data visualization)
 
 **Project Dag (in progress):**
 ![dag](images/dag.png)

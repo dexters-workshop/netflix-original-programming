@@ -2,23 +2,30 @@
 with 
 
 comedies as (
-    select * from {{ ref('base_google_sheets__original_comedies') }}
-),
+        select * from {{ ref('base_google_sheets__original_comedies') }}
+    ),
 
 docuseries as (
-    select * from {{ ref('base_google_sheets__original_docuseries') }}
-),
+        select * from {{ ref('base_google_sheets__original_docuseries') }}
+    ),
 
 dramas as (
-    select * from {{ ref('base_google_sheets__original_dramas') }}
-),
+        select * from {{ ref('base_google_sheets__original_dramas') }}
+    ),
+
 
 originals_unioned as (
+    
     select * from comedies
+    
     union
+    
     select * from docuseries
+    
     union
+    
     select * from dramas
+    
 ),
 
 standardized as (
@@ -48,9 +55,9 @@ premiere_date_cleanup as (
         -- premiere date was ALL jacked up so this is a v1 method for cleaning/casting (refactor later)
         split_part(regexp_replace(premiere, ',', ''), ' ', 1) as premiere_month_name
         , case 
-            when split_part(regexp_replace(premiere, ',', ''), ' ', 1) = 'January' then '01'
-            when split_part(regexp_replace(premiere, ',', ''), ' ', 1) = 'February' then '02'
-            when split_part(regexp_replace(premiere, ',', ''), ' ', 1) = 'March' then '03'
+            when split_part(regexp_replace(premiere, ',', ''), ' ', 1) = 'January'   then '01'
+            when split_part(regexp_replace(premiere, ',', ''), ' ', 1) = 'February'  then '02'
+            when split_part(regexp_replace(premiere, ',', ''), ' ', 1) = 'March'     then '03'
             when split_part(regexp_replace(premiere, ',', ''), ' ', 1) = 'April'     then '04'
             when split_part(regexp_replace(premiere, ',', ''), ' ', 1) = 'May'       then '05'
             when split_part(regexp_replace(premiere, ',', ''), ' ', 1) = 'June'      then '06'
